@@ -36,6 +36,10 @@ public class Aluno {
     }
 
     public void setMatricula(String matricula) {
+        Long.parseLong(matricula);
+        if(matricula.length() != 11) {
+            throw new RuntimeException();
+        }
         this.matricula = matricula;
     }
 
